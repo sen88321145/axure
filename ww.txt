@@ -1,0 +1,65 @@
+
+1111111111111111111111111
+http://localhost:33126
+
+
+
+SELECT     dbo.SchArtEnc.Type, dbo.SchArtEnc.Path, dbo.SchArt.CreateUser, dbo.SchArtEnc.UpTime, dbo.Channel.ChannelCode, dbo.Users.TrueName, dbo.Users.Intro, 
+                      dbo.SchArt.Teacher, dbo.SchArt.TeacherContent, dbo.SchArt.Stat, dbo.SchArt.IsChecked, dbo.Tabs.SysName AS Name, dbo.Tabs.Name AS NickName, 
+                      dbo.SchArtEnc.OldName
+FROM         dbo.SchArt INNER JOIN
+                      dbo.SchArtEnc ON dbo.SchArt.TabID = dbo.SchArtEnc.ArtID INNER JOIN
+                      dbo.Channel ON dbo.SchArt.ChannelID = dbo.Channel.TabID INNER JOIN
+                      dbo.Users ON dbo.SchArt.CreateUser = dbo.Users.TabID LEFT OUTER JOIN
+                      dbo.Tabs ON dbo.Users.TecSub = dbo.Tabs.TabCode
+
+
+
+
+
+ViewOffice>ffmpeg.exe  -ss 8 -i "D:\XXZYPT\xuexiaoziyuanpingtai\管理
+-开发库\服务器电脑端CP\SchSource\ReSource\Nursery\Video\大闹天宫.sw
+e2 -t 00:00:01 -s 1180*425 "D:\XXZYPT\xuexiaoziyuanpingtai\管理库\执
+库\服务器电脑端CP\SchSource\ReSource\Nursery\Video\大闹天宫.JPG"
+
+
+
+
+D:\XXZYPT\xuexiaoziyuanpingtai\管理库\执行区\01-开发库\服务器电脑端CP\SchSource\
+ViewOffice>ffmpeg.exe  -ss 8 -i "D:\XXZYPT\xuexiaoziyuanpingtai\管理库\执行区\01
+-开发库\服务器电脑端CP\SchSource\ReSource\Nursery\Video\大闹天宫.swf" -y -f imag
+e2 -t 00:00:01 -s 1180*425 "D:\XXZYPT\xuexiaoziyuanpingtai\管理库\执行区\01-开发
+库\服务器电脑端CP\SchSource\ReSource\Nursery\Video\大闹天宫.JPG"
+
+
+D:\XXZYPT\xuexiaoziyuanpingtai\管理库\执行区\01-开发库\服务器电脑端CP\SchSource\
+ViewOffice>ffmpeg.exe  -i "D:\XXZYPT\xuexiaoziyuanpingtai\管理库\执行区\01-开发库\服务器电脑端CP\SchSource\ReSource\Nursery\Video\大闹天宫.swf" -y -f image2  -ss 8 -t 00:00:01 -s 1180*425 "D:\XXZYPT\xuexiaoziyuanpingtai\管理库\执行区\01-开发库\服务器电脑端CP\SchSource\ReSource\Nursery\Video\大闹天宫.JPG"
+
+ffmpeg.exe -i "1.swf" -y -f image2  -ss 8 -t 00:00:01 -s 1180*425 "1.JPG"
+D:\XXZYPT\xuexiaoziyuanpingtai\管理库\执行区\01-开发库\服务器电脑端CP\SchSource\ViewOffice>
+ffmpeg.exe  -i "1.swf" -ab 56 -ar 22050 -b 500 -r 15 -s 1180x425 "1.JPG"
+
+
+ffmpeg.exe -i "1.swf" -r 1 -f image2 image-%3d.jpeg
+
+
+
+标题: Microsoft SQL Server Management Studio
+------------------------------
+
+还原 对于 服务器“WIN-PHPQ4DWO6OV”失败。  (Microsoft.SqlServer.SmoExtended)
+
+有关帮助信息，请单击: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=10.50.1600.1+((KJ_RTM).100402-1540+)&EvtSrc=Microsoft.SqlServer.Management.Smo.ExceptionTemplates.FailedOperationExceptionText&EvtID=还原+Server&LinkId=20476
+
+------------------------------
+其他信息:
+
+System.Data.SqlClient.SqlError: 因为数据库正在使用，所以无法获得对数据库的独占访问权。 (Microsoft.SqlServer.Smo)
+
+有关帮助信息，请单击: http://go.microsoft.com/fwlink?ProdName=Microsoft+SQL+Server&ProdVer=10.50.1600.1+((KJ_RTM).100402-1540+)&LinkId=20476
+
+------------------------------
+按钮:
+
+确定
+------------------------------
